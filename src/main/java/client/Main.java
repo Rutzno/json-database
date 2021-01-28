@@ -16,6 +16,12 @@ import java.util.Map;
  * @since 12/27/2020
  */
 
+/**
+ * To launch this class, provide some arguments
+ * for instance : -t set -k 1 -v "Hello Mack!
+ * or to test with a json file : -in setFile.json
+ */
+
 public class Main {
 
     public static void main(String[] argv) {
