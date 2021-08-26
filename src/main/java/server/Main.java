@@ -1,7 +1,6 @@
 package server;
 
 import com.google.gson.*;
-import com.google.gson.reflect.TypeToken;
 import common.Args;
 import common.ArgsModel;
 
@@ -11,7 +10,10 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.TreeMap;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -29,8 +31,7 @@ import java.util.concurrent.locks.ReentrantReadWriteLock;
 public class Main {
 
     private static final int CELL_NUMBERS = 1000;
-//    private static final String[] database = new String[CELL_NUMBERS];
-    private static Map<String, Object> dbMap = new HashMap<>();
+//    private static Map<String, Object> dbMap = new HashMap<>();
     private static Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
     public static OutputStream outputStream;
@@ -44,7 +45,6 @@ public class Main {
 
     public static void main(String[] args) {
 
-//        Arrays.fill(database, "");
         String address = "127.0.0.1";
         int port = 8888;
 
