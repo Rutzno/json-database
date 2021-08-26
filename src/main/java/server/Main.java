@@ -92,7 +92,6 @@ public class Main {
             default:
                 result.put("response", "ERROR");
                 result.put("reason", "No such type");
-                break;
         }
 
         return gson.toJson(result);
