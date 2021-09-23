@@ -56,17 +56,7 @@ public class Args {
         this.value = value;
     }
 
-    /*public File getInputFile() {
-        return inputFile;
-    }
-
-    public void setInputFile(File inputFile) {
-        this.inputFile = inputFile;
-    }
-*/
-
     public String getFileName() {
         return fileName;
     }
-
 }

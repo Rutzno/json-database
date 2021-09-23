@@ -58,7 +58,6 @@ public class Main {
             writeLock = lock.writeLock();
 
             while (true) {
-//                try (Socket socket = server.accept()) {
                 Socket socket = server.accept();
                 Session session = new Session(socket); // This thread will handle the client separately
                 Future<Boolean> future = executor.submit(session);
@@ -66,7 +65,6 @@ public class Main {
                     executor.shutdown();
                     break;
                 }
-//                }
             }
 
         } catch (IOException | InterruptedException | ExecutionException e) {
@@ -223,7 +221,6 @@ public class Main {
                         }
                     }
                 }
-
                 if (!found) {
                     result.put("reason", "No such key");
                     result.put("response", "ERROR");
@@ -231,7 +228,6 @@ public class Main {
                 break;
 
             case "set":
-//                synchronized (Main.class) {
                 readLock.lock();
                 reader = new BufferedReader(new FileReader(file));
                 argsModel = gson.fromJson(reader, ArgsModel.class);
