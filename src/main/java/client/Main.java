@@ -39,10 +39,8 @@ public class Main {
                     .addObject(args)
                     .build()
                     .parse(argv);
-//            String command;
             Map<String, Object> commands = new HashMap<>();
-//            Gson gson = new GsonBuilder().setPrettyPrinting().create();
-            Gson gson = new Gson();
+            Gson gson = new Gson(); // Gson gson = new GsonBuilder().setPrettyPrinting().create();
             if (args == null) {
                 System.out.println("Please, enter the arguments in command line");
                 return;
@@ -75,17 +73,14 @@ public class Main {
             }
             switch (args.getType()) {
                 case "exit":
-//                      command = args.type;
                     commands.put("type", args.getType());
                     break;
                 case "set":
-//                      command = args.type + " " + args.index + " " + args.message;
                     commands.put("type", args.getType());
                     commands.put("key", args.getKey());
                     commands.put("value", args.getValue());
                     break;
                 default:
-                    //command = args.type + " " + args.index;
                     commands.put("type", args.getType());
                     commands.put("key", args.getKey());
                     break;
