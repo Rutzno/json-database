@@ -50,7 +50,6 @@ public class Main {
                 File file = new File("src/main/java/client/data/" + args.getFileName());
 //                File file = new File("src/client/data/" + args.getFileName());
                 try (Reader reader = new BufferedReader(new FileReader(file))) {
-//                    args = gson.fromJson(reader, Args.class);
                     JsonElement tree = JsonParser.parseReader(reader);
                     JsonObject object = tree.getAsJsonObject();
                     args = new Args(object.get("type").getAsString(), object.get("key"));
