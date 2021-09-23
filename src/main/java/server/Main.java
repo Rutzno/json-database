@@ -36,8 +36,7 @@ public class Main {
 
     public static OutputStream outputStream;
     public static Reader reader;
-    private static final File file = new File("src/main/java/server/data/db.json");     //System.getProperty("user.dir") + "/
-//    private static final File file = new File("./src/server/data/db.json");     //System.getProperty("user.dir") + "/
+    private static final File file = new File("src/main/java/server/data/db.json"); //System.getProperty("user.dir") + "/
 
     private static Lock readLock;
     private static Lock writeLock;
